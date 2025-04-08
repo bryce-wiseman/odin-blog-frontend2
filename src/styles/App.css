@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color1: hsl(230, 40%, 20%);
+  --color2: hsl(160, 30%, 30%);
+  --lightText: hsl(240, 10%, 95%);
+  --lightBG: hsla(240, 10%, 90%, 75%);
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(340deg, var(--color1) 33%, var(--color2));
+  color: var(--lightText);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HEADER Styles and Pieces */
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  width: 100%;
+  padding: 0 50px;
+}
+
+.brand-name {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: color 2s, background-color 2s;
+  transition-delay: 0.25s;
+}
+
+.brand-name:hover {
+  color: var(--color1);
+  background-color: var(--lightText);
+}
+
+#create-subtitle {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  background-color: var(--lightText);
+  color: var(--color2);
+  padding: 4px 5px;
+  border-radius: 5px;
+  margin-left: 4px;
+  transition: color 2s, background-color 2s;
+  transition-delay: 0.25s;
+}
+
+#create-subtitle:hover {
+  background-color: var(--color1);
+  color: var(--lightText);
+}
+
+.login-status {
+  font-family: sans-serif;
+  letter-spacing: 0.1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.signout-btn {
+  margin-left: 40px;
+  padding: 5px 10px;
+  background-color: hsla(0, 0%, 90%, 10%);
+  border: none;
+  border-radius: 5px;
+  color: var(--lightText);
+  font-family: 'Courier New', Courier, monospace;
+  transition: background-color 1s, color 1s;
+}
+
+.signout-btn:hover {
+  background-color: var(--lightText);
+  color: var(--color1);
+}
+
+/* DISCLAIMER styles */
+#disclaimer {
+  width: 95%;
+  background-color: var(--lightBG);
+  color: var(--color1);
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Main Section Styles and Pieces (General) */
+.main-section {
+  background: radial-gradient(var(--lightBG), hsla(0, 0%, 90%, 5%));
+  color: var(--color1);
+  border-radius: 20px;
+  width: 95%;
+  min-height: calc(100vh - 250px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LOGIN & SIGNUP Pages */
+.signin-sect, .main-section form label {
+  margin-bottom: 50px;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.main-section input {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 2rem;
+  width: 100%;
+  border: inset lightgray;
+  border-radius: 10px;
+  color: var(--color1);
+  font-size: 1.2rem;
+}
+
+.main-section button {
+  margin-top: 10px;
+  background-color: var(--lightText);
+  color: var(--color2);
+  font-size: 1rem;
+  padding: 5px 10px;
+  border: 1px var(--lightText) solid;
+  border-radius: 5px;
+  transition: background-color .5s, border .25s;
+}
+
+.main-section button:hover {
+  background-color: hsl(260, 10%, 90%);
+  border: 1px var(--color2) solid;
+}
+
+/* DASHBOARD page */
+.newpost-btn {
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  background-color: var(--lightText);
+  border: 1px solid var(--lightText);
+  border-radius: 5px;
+  color: var(--color1);
+  font-family: 'Courier New', Courier, monospace;
+  transition: background-color 1s, border 0.5s;
+}
+
+.newpost-btn:hover {
+  background-color: hsla(0, 0%, 90%, 80%);
+  border: solid 1px var(--color1);
+}
+
+.all-posts-container {
+  height: 90%;
+  width: 90%;
+}
+
+.post-container {
+  margin-bottom: 10px;
+  background-color: hsla(0, 0%, 90%, 80%);
+  border: none;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.post-top-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.post-btns {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.post-mid-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.post-mid-row p {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.post-bot-row {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#new-post-form, #edit-post-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 75%;
+  color: var(--lightText);
+  text-shadow: 2px 2px 8px var(--color1);
+}
+
+.form-sect {
+  width: 90%;
+  margin-bottom: 40px;
+}
+
+#new-post-form input, label, textarea {
+  width: 100%
+}
